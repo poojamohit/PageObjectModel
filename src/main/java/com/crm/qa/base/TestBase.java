@@ -42,11 +42,11 @@ public class TestBase {
 		
 		if(browserName.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver", "/home/ubuntu/jenkin-slave/workspace/chromedriver");	
-			ChromeOptions Options = new ChromeOptions();
-			Options.addArguments("--headless");
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--headless");
 			options.addArguments("--no-sandbox");
 			options.addArguments("--disable-dev-shm-usage");
-			WebDriver Driver = new ChromeDriver(Options);
+			WebDriver Driver = new ChromeDriver(options);
 			//driver = new ChromeDriver();
 			driver.get("https://google.com");
 						
