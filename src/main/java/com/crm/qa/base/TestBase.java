@@ -37,12 +37,18 @@ public class TestBase {
 	}
 	
 	
-	public static void initialization(){
+	public static void initialization() throws IOException {
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver", "/home/ubuntu/jenkin-slave/workspace/chromedriver");	
-			driver = new ChromeDriver(); 
+			ChromeOptions chromeOptions = new ChromeOptions();
+			chromeOptions.setBinary("/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary");
+			chromeOptions.addArguments("--headless");
+			WebDriver Driver = new ChromeDriver(chromeOptions);
+			//driver = new ChromeDriver();
+			Thread.sleep(100);
+			
 		}
 		else if(browserName.equals("FF")){
 			System.setProperty("webdriver.gecko.driver", "/home/ubuntu/jenkin-slave/workspace/geckodriver");	
