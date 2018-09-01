@@ -20,7 +20,7 @@ public class TestUtil extends TestBase{
 	public static long PAGE_LOAD_TIMEOUT = 20;
 	public static long IMPLICIT_WAIT = 20;
 	
-	public static String TESTDATA_SHEET_PATH = "/home/ubuntu/jenkin-slave/workspace/latest"
+	public static String TESTDATA_SHEET_PATH = "/var/lib/jenkins/workspace/latest"
 			+ "/src/main/java/com/crm/qa/testdata/FreeCrmTestData.xlsx";
 	
 	static Workbook book;
