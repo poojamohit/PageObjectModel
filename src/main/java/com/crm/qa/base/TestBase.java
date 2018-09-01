@@ -42,13 +42,13 @@ public class TestBase {
 		
 		if(browserName.equals("chrome")){
 			System.setProperty("webdriver.chrome.driver", "/home/ubuntu/jenkin-slave/workspace/chromedriver");	
-			ChromeOptions chromeOptions = new ChromeOptions();
-			chromeOptions.setBinary("/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary");
-			chromeOptions.addArguments("--headless");
-			WebDriver Driver = new ChromeDriver(chromeOptions);
+			ChromeOptions Options = new ChromeOptions();
+			Options.addArguments("--headless");
+			options.addArguments("--no-sandbox");
+			options.addArguments("--disable-dev-shm-usage");
+			WebDriver Driver = new ChromeDriver(Options);
 			//driver = new ChromeDriver();
-			Thread.sleep(100);
-			
+						
 		}
 		else if(browserName.equals("FF")){
 			System.setProperty("webdriver.gecko.driver", "/home/ubuntu/jenkin-slave/workspace/geckodriver");	
