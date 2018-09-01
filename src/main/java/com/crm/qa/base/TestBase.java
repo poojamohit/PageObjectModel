@@ -37,7 +37,7 @@ public class TestBase {
 	}
 	
 	
-	public static void initialization() throws IOException {
+	public static void initialization(){
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equals("chrome")){
@@ -48,7 +48,7 @@ public class TestBase {
 			options.addArguments("--disable-dev-shm-usage");
 			WebDriver Driver = new ChromeDriver(options);
 			//driver = new ChromeDriver();
-			driver.get("https://google.com");
+			
 						
 		}
 		else if(browserName.equals("FF")){
