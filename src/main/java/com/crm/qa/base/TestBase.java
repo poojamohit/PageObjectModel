@@ -46,7 +46,7 @@ public class TestBase {
 			Options.addArguments("--headless");
 			options.addArguments("--no-sandbox");
 			options.addArguments("--disable-dev-shm-usage");
-			WebDriver Driver = new ChromeDriver(Options);
+			WebDriver Driver = new ChromeDriver(ChromeOptions);
 			//driver = new ChromeDriver();
 						
 		}
